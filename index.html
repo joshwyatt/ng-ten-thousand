@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="/lib/angular/angular.js"></script>
+    <title>10,000 Tut</title>
+  </head>
+  <body>
+    <div ng-controller="MainController as main">
+
+      <input type="text" ng-model="main.data.name" placeholder="enter your name">
+      <pre>Hello {{ main.data.name }} </pre>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+  </body>
+</html>
