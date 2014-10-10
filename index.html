@@ -12,7 +12,10 @@
       <pre>Hello {{ main.data[0] }} </pre>
       <pre>{{ main.reverse(main.data[0]) }} olleH</pre>
 
-      <pre ng-repeat="str in main.data" ng-click="main.remove()">{{ str }}</pre>
+      <pre ng-repeat="str in main.data" ng-click="main.remove()" ng-class="{
+        red: main.data.length % 2 === 0,
+        green: main.data.length % 2 !== 0 
+      }">{{ str }}</pre>
     </div>
 
     <div ng-controller="LinkController as link">
