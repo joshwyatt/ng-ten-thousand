@@ -1,12 +1,14 @@
-function MainController(){
-  this.data = {
-    name: 'josh',
-    age: 34,
-    eyes: 'blue'
+function MainController(MainService){
+  var vm = this;
+
+  vm.data = ['josh', 'blue', 'wild'];
+
+  vm.reverse = MainService.reverse;
+
+  vm.remove = function(){
+    vm.data.pop();
   };
 }
 
-
-angular.module('controllers', [])
-
+angular.module('controllers', ['services'])
 .controller('MainController', MainController);

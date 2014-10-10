@@ -7,11 +7,15 @@
   <body>
     <div ng-controller="MainController as main">
 
-      <input type="text" ng-model="main.data.name" placeholder="enter your name">
-      <pre>Hello {{ main.data.name }} </pre>
+      <input type="text" ng-model="main.data[0]" placeholder="enter your name">
+      <pre>Hello {{ main.data[0] }} </pre>
+      <pre>{{ main.reverse(main.data[0]) }} olleH</pre>
+
+      <pre ng-repeat="str in main.data" ng-click="main.remove()">{{ str }}</pre>
     </div>
 
     <script src="app.js"></script>
     <script src="controllers.js"></script>
+    <script src="services.js"></script>
   </body>
 </html>
