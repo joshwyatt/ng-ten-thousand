@@ -10,5 +10,10 @@ function MainController(MainService){
   };
 }
 
+function LinkController(){
+  var vm = this;
+  vm.link = 'http://theonion.com';
+}
+
 angular.module('controllers', ['services'])
 .controller('MainController', MainController);
