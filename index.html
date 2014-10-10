@@ -21,6 +21,16 @@
         red: main.data.length % 2 === 0,
         green: main.data.length % 2 !== 0 
       }">{{ str }}</pre>
+
+      <br>
+      <hr>
+      <br>
+
+      <a ng-click="showList2 = !showList2">Show the list</a>
+      <pre ng-if="showList2" ng-repeat="str in main.data" ng-click="main.remove()" ng-class="{
+        red: main.data.length % 2 === 0,
+        green: main.data.length % 2 !== 0 
+      }">{{ str }}</pre>
     </div>
     <br>
     <hr>
@@ -29,6 +39,12 @@
       <!-- put input field and a link to go to whatever href is typed into the field -->
       <input type="text" ng-model="link.link">
       <a ng-href="{{ link.link }}">CLICK TO GO</a>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div ng-controller="BindController as bind">
+      <pre ng-bind="bind.thing"></pre>
     </div>
 
     <script src="app.js"></script>

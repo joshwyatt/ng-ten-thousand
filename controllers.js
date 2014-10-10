@@ -15,5 +15,10 @@ function LinkController(){
   vm.link = 'http://theonion.com';
 }
 
+function BindController(){
+  var vm = this;
+  vm.thing = "I'm all bound up";
+}
+
 angular.module('controllers', ['services'])
 .controller('MainController', MainController);
