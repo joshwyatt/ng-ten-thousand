@@ -12,12 +12,19 @@
       <pre>Hello {{ main.data[0] }} </pre>
       <pre>{{ main.reverse(main.data[0]) }} olleH</pre>
 
-      <pre ng-repeat="str in main.data" ng-click="main.remove()" ng-class="{
+      <br>
+      <hr>
+      <br>
+
+      <a ng-click="showList = !showList">Show the list</a>
+      <pre ng-show="showList" ng-repeat="str in main.data" ng-click="main.remove()" ng-class="{
         red: main.data.length % 2 === 0,
         green: main.data.length % 2 !== 0 
       }">{{ str }}</pre>
     </div>
-
+    <br>
+    <hr>
+    <br>
     <div ng-controller="LinkController as link">
       <!-- put input field and a link to go to whatever href is typed into the field -->
       <input type="text" ng-model="link.link">
